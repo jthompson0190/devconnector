@@ -9,7 +9,24 @@ module.exports = {
         type: Sequelize.INTEGER
       },
       name: {
+        type: Sequelize.STRING,
+        notNull: true
+      },
+      email: {
+        type: Sequelize.STRING,
+        notNull: true,
+        unique: true
+      },
+      password: {
+        type: Sequelize.STRING,
+        notNull: true
+      },
+      avatar: {
         type: Sequelize.STRING
+      },
+      date: {
+        type: Sequelize.DATE,
+        defaultValue: Sequelize.NOW
       },
       createdAt: {
         allowNull: false,
